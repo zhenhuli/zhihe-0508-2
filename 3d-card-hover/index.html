@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D 悬浮卡片展示</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="togglePanelBtn" class="toggle-panel-btn">
+        <span>📝</span>
+        <span class="btn-text">编辑卡片</span>
+      </button>
+      
+      <div class="container">
+        <header class="header">
+          <h1>3D 悬浮卡片展示</h1>
+          <p class="subtitle">使用 Three.js + Vite + Tailwind 构建</p>
+        </header>
+        <div id="canvas-container"></div>
+        <div class="controls">
+          <button id="prevBtn" class="control-btn">上一张</button>
+          <button id="autoPlayBtn" class="control-btn">暂停自动轮播</button>
+          <button id="nextBtn" class="control-btn">下一张</button>
+        </div>
+        <div class="layout-controls">
+          <span class="layout-label">布局效果：</span>
+          <button id="gridLayoutBtn" class="layout-btn active">网格布局</button>
+          <button id="circleLayoutBtn" class="layout-btn">环形布局</button>
+          <button id="waveLayoutBtn" class="layout-btn">波浪布局</button>
+        </div>
+      </div>
+      
+      <div id="cardEditorPanel" class="card-editor-panel">
+        <div class="panel-header">
+          <h3>📝 卡片管理</h3>
+          <button id="closePanelBtn" class="close-btn">✕</button>
+        </div>
+        
+        <div class="panel-section">
+          <h4>添加新卡片</h4>
+          <form id="addCardForm" class="card-form">
+            <div class="form-group">
+              <label>标题</label>
+              <input type="text" id="newCardTitle" placeholder="输入卡片标题" maxlength="20" />
+            </div>
+            <div class="form-group">
+              <label>描述</label>
+              <textarea id="newCardDesc" placeholder="输入卡片描述" maxlength="50" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+              <label>颜色</label>
+              <div class="color-input-group">
+                <input type="color" id="newCardColor" value="#e94560" />
+                <span id="newCardColorValue">#e94560</span>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">添加卡片</button>
+          </form>
+        </div>
+        
+        <div class="panel-section">
+          <div class="section-header">
+            <h4>现有卡片</h4>
+            <span id="cardCount" class="card-count">共 0 张</span>
+          </div>
+          <div id="cardList" class="card-list">
+          </div>
+        </div>
+        
+        <div class="panel-section">
+          <button id="resetCardsBtn" class="reset-btn">🔄 重置为默认卡片</button>
+        </div>
+      </div>
+      
+      <div id="editModal" class="edit-modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>✏️ 编辑卡片</h3>
+            <button id="closeModalBtn" class="close-btn">✕</button>
+          </div>
+          <form id="editCardForm" class="card-form">
+            <input type="hidden" id="editCardIndex" />
+            <div class="form-group">
+              <label>标题</label>
+              <input type="text" id="editCardTitle" placeholder="输入卡片标题" maxlength="20" />
+            </div>
+            <div class="form-group">
+              <label>描述</label>
+              <textarea id="editCardDesc" placeholder="输入卡片描述" maxlength="50" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+              <label>颜色</label>
+              <div class="color-input-group">
+                <input type="color" id="editCardColor" value="#e94560" />
+                <span id="editCardColorValue">#e94560</span>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" id="cancelEditBtn" class="cancel-btn">取消</button>
+              <button type="submit" class="submit-btn">保存修改</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
