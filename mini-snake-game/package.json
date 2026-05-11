@@ -1,0 +1,15 @@
+{
+  "name": "mini-snake-game",
+  "version": "1.0.0",
+  "description": "A modular snake game built with Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^5.4.14"
+  }
+}

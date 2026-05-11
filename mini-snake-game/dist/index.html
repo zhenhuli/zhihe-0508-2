@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇游戏</title>
+  <script type="module" crossorigin src="/assets/main-DGKB1IAF.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CRSf3mRf.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <div class="score-panel">
+        <span class="score-label">分数:</span>
+        <span class="score-value" id="score">0</span>
+      </div>
+      <div class="high-score-panel">
+        <span class="high-score-label">最高分:</span>
+        <span class="high-score-value" id="highScore">0</span>
+      </div>
+    </div>
+    
+    <div class="game-controls">
+      <div class="difficulty-selector">
+        <label for="difficulty">难度:</label>
+        <select id="difficulty">
+          <option value="easy">简单</option>
+          <option value="medium" selected>中等</option>
+          <option value="hard">困难</option>
+        </select>
+      </div>
+      <div class="theme-selector">
+        <label for="theme">主题:</label>
+        <select id="theme">
+          <option value="classic" selected>经典</option>
+          <option value="neon">霓虹</option>
+          <option value="nature">自然</option>
+          <option value="ocean">海洋</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="game-board-container">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <div class="game-info">
+      <div class="status" id="status">按空格键开始游戏</div>
+    </div>
+
+    <div class="game-buttons">
+      <button id="startBtn">开始</button>
+      <button id="pauseBtn">暂停</button>
+      <button id="restartBtn">重新开始</button>
+    </div>
+
+    <div class="controls-info">
+      <p>使用方向键或WASD控制蛇的移动</p>
+      <p>空格键暂停/继续游戏</p>
+    </div>
+
+    <div class="mobile-controls" id="mobileControls">
+      <div class="dpad">
+        <button class="dpad-btn dpad-up" id="dpadUp">▲</button>
+        <div class="dpad-middle">
+          <button class="dpad-btn dpad-left" id="dpadLeft">◀</button>
+          <button class="dpad-btn dpad-center" id="dpadCenter">●</button>
+          <button class="dpad-btn dpad-right" id="dpadRight">▶</button>
+        </div>
+        <button class="dpad-btn dpad-down" id="dpadDown">▼</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
