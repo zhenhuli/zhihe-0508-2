@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打砖块游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>打砖块游戏</h1>
+    <div class="game-info">
+      <span>关卡: <span id="level">1</span></span>
+      <span>分数: <span id="score">0</span></span>
+      <span>生命: <span id="lives">3</span></span>
+    </div>
+    <div class="level-controls">
+      <button id="prevLevel">上一关</button>
+      <span id="patternName">标准模式</span>
+      <button id="nextLevel">下一关</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div class="game-overlay" id="gameOverlay">
+      <h2 id="overlayTitle">游戏开始</h2>
+      <p id="overlayMessage">点击开始游戏</p>
+      <button id="startBtn">开始游戏</button>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
