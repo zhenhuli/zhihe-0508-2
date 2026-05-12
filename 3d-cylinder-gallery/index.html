@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D 圆柱相册</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="canvas-container"></div>
+      
+      <div class="controls fixed top-4 left-4 z-10 flex flex-col gap-3">
+        <h1 class="text-2xl font-bold text-white drop-shadow-lg">3D 圆柱相册</h1>
+        <label class="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors text-center">
+          <input type="file" id="add-image" accept="image/*" multiple class="hidden" />
+          添加图片
+        </label>
+        <button id="delete-image" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+          删除选中
+        </button>
+      </div>
+
+      <div class="hint fixed bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-lg">
+        拖拽旋转圆柱 | 点击图片放大预览
+      </div>
+
+      <div id="preview-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center">
+        <div class="relative max-w-4xl max-h-[90vh]">
+          <img id="preview-image" src="" alt="预览" class="max-w-full max-h-[90vh] object-contain rounded-lg" />
+          <button id="close-preview" class="absolute -top-12 right-0 text-white text-4xl hover:text-gray-300 transition-colors">
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
