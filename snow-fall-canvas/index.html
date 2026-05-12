@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪花飘落特效</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="snowCanvas"></canvas>
+    
+    <div class="control-panel">
+        <button class="toggle-btn" id="toggleBtn">⚙️</button>
+        <div class="controls" id="controls">
+            <div class="control-item">
+                <label>雪花大小: <span id="sizeValue">5</span></label>
+                <input type="range" id="sizeSlider" min="2" max="50" value="5" step="1">
+            </div>
+            <div class="control-item">
+                <label>雪花密度: <span id="densityValue">150</span></label>
+                <input type="range" id="densitySlider" min="20" max="500" value="150" step="10">
+            </div>
+            <div class="control-item">
+                <label>下落速度: <span id="speedValue">2</span></label>
+                <input type="range" id="speedSlider" min="0.5" max="8" value="2" step="0.5">
+            </div>
+            <div class="control-item">
+                <label>雪花形状</label>
+                <select class="shape-select" id="shapeSelect">
+                    <option value="random">随机混合</option>
+                    <option value="snowflake1">雪花类型 1</option>
+                    <option value="snowflake2">雪花类型 2</option>
+                    <option value="snowflake3">雪花类型 3</option>
+                    <option value="snowflake4">雪花类型 4</option>
+                    <option value="snowflake5">雪花类型 5</option>
+                    <option value="snowflake6">雪花类型 6</option>
+                </select>
+            </div>
+            <div class="control-item">
+                <label>夜景模式</label>
+                <button class="toggle-mode-btn" id="nightModeBtn">开启</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
