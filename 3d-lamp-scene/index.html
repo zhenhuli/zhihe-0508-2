@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D灯光静物场景</title>
+  </head>
+  <body>
+    <div id="canvas-container"></div>
+    <div class="controls-panel">
+      <h2>🎨 控制面板</h2>
+      
+      <div class="control-group">
+        <h3>💡 主光源设置</h3>
+        <div class="control-item">
+          <label>光源颜色</label>
+          <input type="color" id="light-color" value="#ffffff">
+        </div>
+        <div class="control-item">
+          <label>亮度: <span id="intensity-value">1.0</span></label>
+          <input type="range" id="light-intensity" min="0" max="3" step="0.1" value="1">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>🌑 阴影设置</h3>
+        <div class="control-item">
+          <label>阴影强度: <span id="shadow-value">0.5</span></label>
+          <input type="range" id="shadow-intensity" min="0" max="1" step="0.05" value="0.5">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>🎭 材质切换</h3>
+        <div class="control-item">
+          <button class="material-btn" data-material="standard">标准材质</button>
+          <button class="material-btn" data-material="phong">Phong材质</button>
+          <button class="material-btn" data-material="metallic">金属材质</button>
+          <button class="material-btn" data-material="glass">玻璃材质</button>
+          <button class="material-btn" data-material="cotton">🧵 棉麻材质</button>
+          <button class="material-btn" data-material="fur">🧶 皮毛材质</button>
+          <button class="material-btn" data-material="silk">🎀 丝绸材质</button>
+          <button class="material-btn" data-material="leather">👜 皮革材质</button>
+          <button class="material-btn" data-material="rubber">🎈 橡胶材质</button>
+          <button class="material-btn" data-material="wood">🪵 木质材质</button>
+          <button class="material-btn" data-material="marble">🪨 大理石材质</button>
+          <button class="material-btn" data-material="ceramic">🏺 陶瓷材质</button>
+          <button class="material-btn" data-material="wireframe">线框材质</button>
+        </div>
+      </div>
+
+      <div class="info">
+        <p>🖱️ 鼠标拖拽旋转场景</p>
+        <p>🔍 滚轮缩放视角</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
