@@ -1,0 +1,17 @@
+{
+  "name": "personal-blog-static",
+  "version": "1.0.0",
+  "description": "Static personal blog with HTML, Parcel, and SCSS",
+  "scripts": {
+    "start": "parcel src/index.html src/post.html",
+    "build": "parcel build src/index.html src/post.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "sass": "^1.77.0"
+  },
+  "dependencies": {
+    "marked": "^18.0.3"
+  }
+}

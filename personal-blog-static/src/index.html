@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人博客</title>
+  <link rel="stylesheet" href="./styles/main.scss">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo">我的博客</h1>
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">首页</a>
+          <a href="#" class="nav-link">归档</a>
+          <a href="#" class="nav-link">关于</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle">
+          <span class="icon sun">☀️</span>
+          <span class="icon moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">文章分类</h3>
+            <ul class="category-list">
+              <li class="category-item active" data-category="all">
+                <span>全部文章</span>
+                <span class="count">12</span>
+              </li>
+              <li class="category-item" data-category="frontend">
+                <span>前端开发</span>
+                <span class="count">5</span>
+              </li>
+              <li class="category-item" data-category="backend">
+                <span>后端开发</span>
+                <span class="count">3</span>
+              </li>
+              <li class="category-item" data-category="design">
+                <span>设计相关</span>
+                <span class="count">2</span>
+              </li>
+              <li class="category-item" data-category="life">
+                <span>生活随笔</span>
+                <span class="count">2</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">最新文章</h3>
+            <ul class="recent-posts" id="recentPosts">
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">标签云</h3>
+            <div class="tag-cloud">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Vue</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">CSS</span>
+              <span class="tag">HTML</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Webpack</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="posts-section">
+          <div class="posts-header">
+            <h2>文章列表</h2>
+          </div>
+          
+          <div class="filter-container">
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="搜索文章..." class="search-input">
+            </div>
+            <div class="sort-box">
+              <select id="sortSelect" class="sort-select">
+                <option value="date-desc">最新发布</option>
+                <option value="date-asc">最早发布</option>
+                <option value="read-asc">阅读时间最短</option>
+                <option value="read-desc">阅读时间最长</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="tag-filter" id="tagFilter">
+          </div>
+          
+          <div class="filter-result" id="filterResult">
+            共 <span id="postCount">0</span> 篇文章
+          </div>
+          
+          <div class="posts-list" id="postsList">
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 我的博客. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
